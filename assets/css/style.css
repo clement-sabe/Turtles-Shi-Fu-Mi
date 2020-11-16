@@ -1,0 +1,384 @@
+@font-face {
+  font-family: 'turtlesregular';
+  src: url('../fonts/turtles-webfont.woff2') format('woff2'),
+    url('../fonts/turtles-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: auto;
+}
+
+/* drag and drop */
+#drop {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 75%;
+  height: 100%
+}
+
+#game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.title {
+  margin-bottom: -170px;
+}
+#shifumi {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bloc {
+  width: 10em;
+  height: 10em;
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+}
+
+.card {
+  background-color: rgb(255, 255, 255, 0.5);
+  border-color: rgb(112, 112, 112, 0.5);
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 18px 18px 18px -5px black;
+  border-radius: 18px 18px 18px 18px;
+}
+
+#empty {
+  display: flex;
+  box-shadow: 18px 18px 18px -5px black;
+  background-color: rgb(225, 225, 225, 0.5);
+  border: 5px dashed green;
+  border-radius: 18px 18px 18px 18px;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-family: 'Concert One', cursive;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 0.5em 0em 0.5em 0em;
+  border-radius: 22px;
+}
+
+p {
+  font-size: 1.5em;
+  color: green;
+  text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+  font-family: 'turtlesregular';
+}
+
+.deposed {
+  font-size: 3em;
+}
+
+#carapace {
+  background-image: url("../img/carapace.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 3px solid black;
+}
+
+#pizza {
+  background-image: url("../img/pizza.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 3px solid black;
+}
+
+#sai {
+  background-image: url("../img/sai.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 3px solid black;
+}
+
+.reply {
+  background-size: contain;
+}
+
+#counter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.7em;
+  padding: 0em 1em 0em 1em;
+  font-size: 1.5em;
+  font-family: turtlesregular;
+}
+
+.players {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.7em;
+  padding: 0em 1em 0em 1em;
+  font-size: 0.5em;
+}
+
+#player {
+  margin-left: 45px;
+  width: 355px;
+  height: 425px;
+  border-radius: 18px 18px 18px 18px;
+}
+
+#ordi {
+  margin-right: 45px;
+  width: 320px;
+  height: 375px;
+  border-radius: 18px 18px 18px 18px;
+}
+
+#test {
+  font-family: 'turtlesregular';
+  font-size: 2em;
+  padding: 0.7em;
+  margin: 0em 1em 0em 1em;
+  text-align: center;
+}
+
+#winLose {
+  font-size: 2.5em;
+  text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+  color: #f2a500;
+  margin-left: 2em;
+  display: flex;
+  justify-content: center;
+  font-family: 'turtlesregular';
+}
+
+body {
+  margin: 0.2em;
+  font-family: 'turtlesregular';
+}
+
+main {
+  border-radius: 18px;
+  border: 3px solid white;
+  background-image: url(../img/the-city-the-moon-roof-donatello-wallpaper-preview.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'turtlesregular';
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+#reset {
+  position: sticky;
+  height: 2em;
+  margin: auto;
+  box-shadow: inset 5px 5px 16px #053210,
+    inset -5px -5px 16px #13c03e;
+  background-color: green;
+  border-radius: 22px;
+  border: 5px solid black;
+  color: green;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: 'turtlesregular';
+  text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+  margin-bottom: 50px;
+}
+
+#reset:hover {
+  background-color: red;
+  box-shadow: 0px 0px 0px;
+  text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+
+}
+
+#RuleOfTheGame {
+  border-radius: 100px;
+  background: #0c7927;
+  box-shadow: inset 5px 5px 16px #053210,
+    inset -5px -5px 16px #13c03e;
+  border: 5px solid black;
+  color: green;
+  font-family: 'turtlesregular';
+  text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+  font-size: 20px;
+  left: 25px;
+  height: 45px;
+  bottom: 20px;
+}
+
+#RuleOfTheGame:hover {
+  border-radius: 100px;
+  box-shadow: 5px 5px 16px #320505,
+    -5px -5px 16px #c01313;
+  text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+
+}
+
+footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  font-size: 0.5em;
+  margin-left: 100px;
+}
+
+#random {
+  background-image: no-repeat;
+}
+
+/* Media queries */
+@media screen and (max-width : 830px) {
+  main {
+    width: 100%;
+  }
+
+  p {
+    font-size: 1em;
+    color: green;
+    text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+    font-family: 'turtlesregular';
+  }
+
+  h1 {
+    width: 100%;
+  }
+
+  .bloc {
+    width: 7em;
+    height: 7em;
+    margin: 0.7em 0.2em 0.7em 0.2em;
+  }
+  #empty{
+    width: 6em;
+    height: 6em;
+    margin: 0.7em 0.2em 0.7em 0.2em;
+  }
+
+  img {
+    width: 6em;
+  }
+
+  #counter {
+    font-size: 1em;
+  }
+
+  #player {
+    margin-left: 45px;
+    width: 112px;
+    height: 112px;
+    border-radius: 18px 18px 18px 18px;
+  }
+  
+  #shredder {
+    margin-right: 45px;
+    width: 75px;
+    height: 90px;
+    border-radius: 18px 18px 18px 18px;
+  }
+
+  .deposed {
+    font-size: 1em;
+  }
+
+  footer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: 0.2em;
+  }
+
+  #RuleOfTheGame {
+    border-radius: 100px;
+    background: #0c7927;
+    box-shadow: inset 5px 5px 16px #053210,
+      inset -5px -5px 16px #13c03e;
+    border: 5px solid black;
+    color: green;
+    font-family: 'turtlesregular';
+    text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+    font-size: 15px;
+    left: 25px;
+    height: 45px;
+    bottom: 20px;
+  }
+}
+
+/* bouton music */
+.toggle {
+  background: rgba(0,0,0,0.1);
+  width: 77px;
+  height: 22px;
+  position: absolute;
+  left: 20px;
+  top:20px;
+  -webkit-user-select: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 25px;
+  font-family: arial;
+  line-height: 22px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+.toggle .on, .toggle .off {
+  z-index: 10;
+  position: absolute;
+  top: 0px;
+  height: 24px;
+  width:29px;
+  transition: all 0.2s;
+}
+.toggle .off {
+  right: 10px;
+  color: red;
+}
+.toggle .on {
+  left: 5px;
+  color:#fff;
+}
+.toggle .slide {
+  transition: all 0.2s ease;
+  position: absolute;
+  /* left: 3px; */
+  top: -1px;
+  bottom: 0;
+  background: green;
+  width: 30px;
+  height: 25px;
+  z-index: 1;
+  border-radius:5px;
+}
+.toggle:hover .slide {
+  /*background: #999;*/
+}
+.toggle.active .slide {
+  left: 36px;
+}
+.toggle.active .off {
+  color:red;
+}
+.toggle.active .on {
+  color:#fff;
+}
+
+.musicplayer{
+	width: 140px;
+  margin: 40px auto 0 auto;
+}
