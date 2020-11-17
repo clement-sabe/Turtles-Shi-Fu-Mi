@@ -105,7 +105,7 @@ $( "#empty" ).droppable({
       $('#defeat').text('Ordinateur : ' + looser);
       $('#test').text(Math.floor(champions/tryCount*100) + '% de réussite');
       //Fait apparaître le bouton réinitialiser après avoir joué le premier coup
-      $('#reset').css('display', 'bloc');
+      $('#reset').css('display', 'block');
       //Au mouseover sur une carte réponse, la carte ordi redevient blanche
       $('.reply').mousedown(function(){
           $('#random').css('background-image', 'none');
@@ -132,9 +132,4 @@ $(document).ready(function(){
     $("#audio-player")[0].pause();
   });
 });
-function setNewImage(){
-  document.getElementById("player").src = "assets/img/tthover.png"}
-  $('#player').css('height', '425px', 'width', '355px');
-function setOldImage(){
-  document.getElementById("player").src = "assets/img/ttnm.png"
-}
+
