@@ -67,19 +67,19 @@ $( "#empty" ).droppable({
       } else if (userMove == 'Pierre' && ordiMove == 'Ciseaux'){
         champions++;
           tryCount++;
-          $('#winLose').text('Gagné!');
+          $('#winLose').text('COWABUNGA !!!');
           $('#winLose').css('color', 'green');
           //SINON SI USER = Feuille et ORDI = Pierre, alerte Gagné, +1  compteur d'essais, +1 compteur gagné
       } else if (userMove == 'Feuille' && ordiMove == 'Pierre'){
         champions++;
           tryCount++;
-          $('#winLose').text('Gagné!');
+          $('#winLose').text('COWABUNGA !!!');
           $('#winLose').css('color', 'green');
           //SINON SI USER = Ciseaux et ORDI = Feuille, alerte Gagné, +1  compteur d'essais, +1 compteur gagné
       } else if (userMove == 'Ciseaux' && ordiMove == 'Feuille'){
         champions++;
           tryCount++;
-          $('#winLose').text('Gagné!');
+          $('#winLose').text('COWABUNGA !!!');
           $('#winLose').css('color', 'green');
           //SINON SI ORDI = Pierre et USER = Ciseaux, alerte Perdu, +1  compteur d'essais, +1 compteur perdu
       } else if (ordiMove == 'Pierre' && userMove == 'Ciseaux'){
