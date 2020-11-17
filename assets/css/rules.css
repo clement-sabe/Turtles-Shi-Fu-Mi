@@ -96,6 +96,9 @@ body {
   text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
 
 }
+#backToGame:focus {
+  outline: none;
+} 
 
 #backToGame2 {
   border-radius: 100px;
@@ -117,8 +120,10 @@ body {
   box-shadow: 5px 5px 16px #320505,
     -5px -5px 16px #c01313;
   text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
-
 }
+#backToGame2:focus {
+  outline: none;
+} 
 
 /* Media queries */
 @media screen and (max-width : 865px) {
